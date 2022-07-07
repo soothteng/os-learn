@@ -11,8 +11,8 @@ for i in range(100000):
     DUT1 = int(os.popen("./multimod-64 {} {} {}".format(a, b, m)).read())
 
     if REF != DUT1 or REF != DUT2:
-        print("False a={} b={} m={} REF={} DUT1={} DUT2={}".format(
-            a, b, m, REF, DUT1, DUT2))
+        print("False a={} b={} m={} REF={} DUT1={}".format(
+            a, b, m, REF, DUT1))
         f = False
 
 if f:
