@@ -12,13 +12,22 @@ void test(uint64_t a, uint64_t b, uint64_t m) {
 }
 
 int main() {
+  /*
+  // origin test frame
   test(123, 456, 789);
   test(123, 456, -1ULL);
   test(-2ULL, -2ULL, -1ULL); // should be 1
+  // use python in c to test
   char buf[100];
   FILE *fp = popen("python3 multimod.py", "r");
   assert(fp);
   fscanf(fp, "%s", buf);
   printf("popen() returns: %s\n", buf);
   pclose(fp);
+  //get the size of the array (the byte)
+  uint64_t a[65];
+  printf("%lu\n", sizeof(a));
+  int a[65];
+  printf("%lu\n", sizeof(a));
+  */
 }
