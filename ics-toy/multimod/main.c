@@ -11,7 +11,7 @@ void test(uint64_t a, uint64_t b, uint64_t m) {
   printf(U64 " * " U64 " mod " U64 " = " U64 "\n", a, b, m, multimod(a, b, m));
 }
 
-int main() {
+int main(int argc, char* argv[]) {
   /*
   // origin test frame
   test(123, 456, 789);
@@ -30,4 +30,10 @@ int main() {
   int a[65];
   printf("%lu\n", sizeof(a));
   */
+  uint64_t a, b, m;
+  a = strtoll(argv[1], NULL, 10);
+  b = strtoll(argv[2], NULL, 10);
+  m = strtoll(argv[3], NULL, 10);
+  uint64_t ret = multimod(a, b, m);
+  printf("%lu\n", ret);
 }
