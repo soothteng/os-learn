@@ -1,13 +1,13 @@
 #include "args.h"
 
 #define _GNU_SOURCE /* from man page */
-#include <assert.h>
-#include <ctype.h>
+#include <assert.h> /* assert */
+#include <ctype.h>  /* isdigit */
 #include <dirent.h> /* opendir DIR */
-#include <stdint.h>
+#include <stdint.h> /* uint */
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdlib.h> /* malloc fscanf fopen fgets */
+#include <string.h> /* memcpy */
 #include <unistd.h> /* pid, chdir */
 
 #define RED "\33[1;31m"
@@ -173,8 +173,11 @@ void make_tree() {
             add_sonpro(info[ppid], pid);
             fclose(fp);
           }
+
         }
+
       }
+
     }
   }
   closedir(dp);
