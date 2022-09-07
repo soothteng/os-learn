@@ -1,5 +1,9 @@
 # A collection of projects when I learn operating system
 
+## frecov
+
+recover bmp files in a FAT32 image.
+
 ## pstree
 
 A basic linux pstree command writing in pure C.
